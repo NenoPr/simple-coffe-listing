@@ -1,0 +1,92 @@
+.content-container {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  width: 80%;
+  justify-self: center;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  background-color: #1b1d1f;
+}
+
+h1 {
+  color: #fef7ee;
+}
+
+.description {
+  width: 60%;
+  color: #6f757c;
+  font-size: 1.5rem;
+}
+
+.content-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  color: #fef7ee;
+}
+
+.content-tab {
+  padding: 1rem;
+  font-weight: bolder;
+}
+
+.coffee-selection-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.coffee-card {
+}
+
+img {
+  border-radius: 1rem;
+  width: 20vw;
+}
+
+.coffee-card-name-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.coffee-name {
+  color: #fef7ee;
+  font-weight: bolder;
+  font-size: 1.35rem;
+}
+
+.coffee-price {
+  padding: 0.5rem;
+  background-color: #bee3cc;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  color: #1b1d1f;
+}
+
+.star-image {
+  width: 2.25rem;
+}
+
+.coffee-card-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.coffee-rating {
+  color: #fef7ee;
+}
