@@ -16,13 +16,16 @@ function CoffeeCard({ coffee }: CoffeeCardProps) {
         <p className="coffee-price">{coffee.price}</p>
       </div>
       <div className="coffee-card-rating">
-        <img
-          className="star-image"
-          src={coffee.rating ? StarFill : Star}
-          alt="star"
-        />
-        <p className="coffee-rating">{coffee.rating}</p>
-        <p>({coffee.votes} votes)</p>
+        <div className="rating-container">
+          <img
+            className="star-image"
+            src={coffee.rating ? StarFill : Star}
+            alt="star"
+          />
+          <p className="coffee-rating">{coffee.rating}</p>
+          <p>({coffee.votes} votes)</p>
+        </div>
+        <p className="sold-out">{coffee.available ? "" : "Sold Out"}</p>
       </div>
     </div>
   );

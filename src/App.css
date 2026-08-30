@@ -12,6 +12,9 @@
   gap: 1rem;
   border-radius: 1rem;
   background-color: #1b1d1f;
+  background-image: url("./assets/vector.svg");
+  background-repeat: no-repeat;
+  background-position: 75% 5%;
 }
 
 h1 {
@@ -87,7 +90,7 @@ img {
 .coffee-card-rating {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   font-size: 1.25rem;
@@ -95,4 +98,100 @@ img {
 
 .coffee-rating {
   color: #fef7ee;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sold-out {
+  align-self: center;
+  color: #ed735d;
+}
+
+@media (max-width: 1024px) {
+  #root {
+    background-image: url("./assets/bg-cafe.jpg");
+  }
+  .content-container {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    width: 90%;
+    justify-self: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: #1b1d1f;
+  }
+  img {
+    border-radius: 1rem;
+    width: 25vw;
+  }
+  .coffee-price {
+    padding: 0.25rem;
+    background-color: #bee3cc;
+    border-radius: 0.25rem;
+    font-weight: bolder;
+    color: #1b1d1f;
+  }
+
+  .coffee-card {
+    font-size: 1rem;
+  }
+
+  .coffee-card-rating {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #root {
+    background-image: url("./assets/bg-cafe-sm.jpg");
+  }
+  .content-container {
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    width: 90%;
+    justify-self: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: #1b1d1f;
+  }
+  .description {
+    font-size: 1rem;
+    width: 100%;
+  }
+  img {
+    border-radius: 1rem;
+    width: 60vw;
+  }
+  .coffee-price {
+    padding: 0.25rem;
+    background-color: #bee3cc;
+    border-radius: 0.25rem;
+    font-weight: bolder;
+    color: #1b1d1f;
+  }
+
+  .coffee-card {
+    font-size: 1rem;
+  }
+
+  .coffee-card-rating {
+    font-size: 1rem;
+  }
 }
