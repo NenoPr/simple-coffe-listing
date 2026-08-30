@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import CoffeeCard from "./components/coffee-card";
+import type { Coffee } from "./types/Coffe";
 import "./App.css";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Coffee[]>([]);
   const [currentTab, setCurrentTab] = useState("all");
 
   const fetchData = () => {
@@ -18,6 +19,7 @@ function App() {
       })
       .catch((error) => {
         // Handle any errors here
+        console.log(error);
       });
   };
 

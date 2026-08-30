@@ -1,7 +1,11 @@
-import { useState, useEffect } from "react";
 import "../App.css";
+import type { Coffee } from "../types/Coffe";
 
-function CoffeeCard({ coffee }) {
+type CoffeeCardProps = {
+  coffee: Coffee;
+};
+
+function CoffeeCard({ coffee }: CoffeeCardProps) {
   return (
     <div className="coffee-card">
       <img src={coffee.image} alt={coffee.name} />
