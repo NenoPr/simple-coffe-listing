@@ -62,7 +62,7 @@
   flex-direction: column;
   box-sizing: border-box;
   background-color: #111315;
-  background-image: url(bg-cafe-lg.jpg);
+  background-image: url("./assets/bg-cafe-lg.jpg");
   background-repeat: no-repeat;
 
   font-family: "DM Sans", sans-serif;

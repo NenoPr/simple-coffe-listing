@@ -1,5 +1,7 @@
 import "../App.css";
 import type { Coffee } from "../types/Coffe";
+import Star from "../assets/Star.svg";
+import StarFill from "../assets/Star_fill.svg";
 
 type CoffeeCardProps = {
   coffee: Coffee;
@@ -16,7 +18,7 @@ function CoffeeCard({ coffee }: CoffeeCardProps) {
       <div className="coffee-card-rating">
         <img
           className="star-image"
-          src={coffee.rating ? "/Star_fill.svg" : "/Star.svg"}
+          src={coffee.rating ? StarFill : Star}
           alt="star"
         />
         <p className="coffee-rating">{coffee.rating}</p>
