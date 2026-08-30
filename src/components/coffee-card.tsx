@@ -10,6 +10,7 @@ type CoffeeCardProps = {
 function CoffeeCard({ coffee }: CoffeeCardProps) {
   return (
     <div className="coffee-card">
+      {coffee.popular ? <div className="popular">Popular</div> : ""}
       <img src={coffee.image} alt={coffee.name} />
       <div className="coffee-card-name-holder">
         <p className="coffee-name">{coffee.name}</p>

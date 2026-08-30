@@ -57,6 +57,17 @@ h1 {
 .coffee-card {
 }
 
+.popular {
+  position: absolute;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.25rem;
+  background-color: #f6c768;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+  color: #1b1d1f;
+}
+
 img {
   border-radius: 1rem;
   width: 20vw;
