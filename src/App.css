@@ -34,6 +34,12 @@ h1 {
 .content-tab {
   padding: 1rem;
   font-weight: bolder;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+.selected-tab {
+  background-color: #4d5562;
 }
 
 .coffee-selection-container {

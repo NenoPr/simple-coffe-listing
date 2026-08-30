@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import StarFill from "../public/Star_fill.svg";
+import CoffeeCard from "./components/coffee-card";
 import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
+  const [currentTab, setCurrentTab] = useState("all");
 
   const fetchData = () => {
     fetch(
@@ -20,6 +21,9 @@ function App() {
       });
   };
 
+  const displayedCoffees =
+    currentTab === "all" ? data : data.filter((coffee) => coffee.available);
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -35,32 +39,31 @@ function App() {
             batches and shipped fresh weekly.
           </p>
           <div className="content-tabs">
-            <div className="content-tab">All Products</div>
-            <div className="content-tab">Available Now</div>
+            <div
+              className={
+                currentTab == "all" ? "content-tab selected-tab" : "content-tab"
+              }
+              onClick={() => setCurrentTab("all")}
+            >
+              All Products
+            </div>
+            <div
+              className={
+                currentTab == "available"
+                  ? "content-tab selected-tab"
+                  : "content-tab"
+              }
+              onClick={() => setCurrentTab("available")}
+            >
+              Available Now
+            </div>
           </div>
           <div className="coffee-selection-container">
-            {data
-              ? data.map((coffee) => {
-                  return (
-                    <div className="coffee-card" key={coffee.id}>
-                      <img src={coffee.image} alt={coffee.name} />
-                      <div className="coffee-card-name-holder">
-                        <p className="coffee-name">{coffee.name}</p>
-                        <p className="coffee-price">{coffee.price}</p>
-                      </div>
-                      <div className="coffee-card-rating">
-                        <img
-                          className="star-image"
-                          src={coffee.rating ? "/Star_fill.svg" : "/Star.svg"}
-                          alt="star"
-                        />
-                        <p className="coffee-rating">{coffee.rating}</p>
-                        <p>({coffee.votes} votes)</p>
-                      </div>
-                    </div>
-                  );
-                })
-              : "Nothing here yet"}
+            {displayedCoffees.length > 0
+              ? displayedCoffees.map((coffee) => (
+                  <CoffeeCard coffee={coffee} key={coffee.id} />
+                ))
+              : "Nothing here yet..."}
           </div>
         </div>
       </main>
